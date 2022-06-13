@@ -1,0 +1,29 @@
+const app = require('../app')
+const http = require('http');
+const port = normalizePort(process.env.PORT || 9001);
+
+
+const server = http.createServer(app);
+
+server.listen(port =>{
+    console.log(`Server is Listening`);   
+})
+
+
+
+
+function normalizePort(val) { //
+    var port = parseInt(val, 10);
+  
+    if (isNaN(port)) {
+      // named pipe
+      return val;
+    }
+  
+    if (port >= 0) {
+      // port number
+      return port;
+    }
+  
+    return false;
+  }
