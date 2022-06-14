@@ -18,4 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.options('*', cors());
 
+
+//index Route
+var indexRouter = require('./routes/index');
+app.use('/api', indexRouter);
+
+
 module.exports = app;
